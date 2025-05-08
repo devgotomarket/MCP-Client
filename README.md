@@ -22,13 +22,20 @@ This repo contains two separate MCP clients — one is MCP Client with OpenAI In
 
 ## Setup Instructions
 
-### 1. Install dependencies
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/devgotomarket/MCP-Client.git
+cd MCP-Client
+```
+
+### 2. Install dependencies
 
 ```bash
 npm install
 ```
 
-### 2. Compile TypeScript
+### 3. Compile TypeScript
 
 ```bash
 npm run build
@@ -38,7 +45,7 @@ This will generate the compiled JS files under the `build/` directory.
 
 ---
 
-## Running the Client
+## 4. prepare .env 
 
 Make sure your `.env` file is set up with the appropriate API key depending on the client:
 
@@ -56,13 +63,13 @@ ANTHROPIC_MODEL=anthropic_model ex:(claude-3-5-sonnet-20241022)
 
 ---
 
-### Run OpenAI Client
+### 5. Run MCP Client (LLM-OpenAI)
 
 ```bash
 node build/mcp-client-openai.js path/to/server.py
 ```
 
-### Run Claude Client
+### 6. Run Claude Client (LLM-Claude)
 
 ```bash
 node build/mcp-client-claude.js path/to/server.py
